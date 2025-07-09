@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Order">
+    <h1 class="mb-6">Place Your Order</h1>
+    <form class="flex flex-col gap-4 max-w-md" method="post" action="#">
+        <label>
+            Name
+            <input type="text" name="name" class="input input-bordered w-full" required />
+        </label>
+        <label>
+            Email
+            <input type="email" name="email" class="input input-bordered w-full" required />
+        </label>
+        <label>
+            Quantity
+            <input type="number" name="quantity" class="input input-bordered w-full" min="1" value="1" required />
+        </label>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</Layout>
